@@ -1,0 +1,130 @@
+#user-form {
+    background: linear-gradient(to right, rgb(185, 11, 156), rgb(224, 9, 38));
+}
+
+#user-form .section-title {
+    color: #fff;
+}
+
+#user-form .form {
+    flex-direction: column;
+}
+
+#user-form .form form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#form input[type="submit"], #form input[type="reset"] {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 10px;
+    width: 100%;
+    background: #d3d3d4;
+    border: none;
+    border-radius: 4px;
+    transition: letter-spacing 0.3s ease;
+}
+
+#form input[type="submit"] {
+    position: relative;
+    background: linear-gradient(to right, rgb(71, 172, 231), rgb(21, 120, 177));
+    color: white;
+    transition: letter-spacing 0.3s ease;
+}
+
+#form .buttons input:hover {
+    letter-spacing: 0.1rem;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 1rem;
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input-control input:focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-control label {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+#form .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 1.2rem;
+    height: 25px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+#form .buttons input:hover {
+    cursor: pointer;
+}
+
+#close-btn {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-family: sans-serif;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#close-btn:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}

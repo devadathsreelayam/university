@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Calicut</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..25,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="department.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <aside id="sidebar">
+        <div class="brand">
+            <div class="logo">
+                <img src="img/emblem-white.png" alt="university emblem">
+            </div>
+            <div class="name">
+                <p>University of Calicut</p>
+                <p class="mal">കാലിക്കറ്റ് സർവ്വകലാശാല</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="sidemenu">
+                <li class="close-button">
+                    <a onclick=closeSidebar()>
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </a>
+                </li>
+                <li><a onclick=closeSidebar() href="#">Home</a></li>
+                <li><a onclick=closeSidebar() href="#notifications">Notifications</a></li>
+                <li><a onclick=closeSidebar() href="#about">About</a></li>
+                <li><a onclick=closeSidebar() href="#department">Departments</a></li>
+                <li><a onclick=showSubmenu() href="javascript:void(0);">Dashboard<i class="arrow down"></i></a>
+                    <ul class="submenu">
+                        <li><a onclick=closeSubmenu() href="javascript:void(0);">Student Portal</a></li>
+                        <li><a onclick=closeSubmenu() href="javascript:void(0);">Faculty Login</a></li>
+                        <li><a onclick=closeSubmenu() href="javascript:void(0);">Officials</a></li>
+                    </ul>
+                </li>
+                <li><a onclick=closeSidebar() href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Section 1: Home -->
+    <section id="banner" class="container">
+        <header id="navbar">
+            <div class="brand">
+                <div class="logo">
+                    <img src="img/emblem.webp" alt="university emblem">
+                </div>
+                <div class="name">
+                    <p>University of Calicut</p>
+                    <p class="mal">കാലിക്കറ്റ് സർവ്വകലാശാല</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="navmenu">
+                    <li class="hideOnMobile"><a href="#">Home</a></li>
+                    <li class="hideOnMobile"><a href="#notifications">Notifications</a></li>
+                    <li class="hideOnMobile"><a href="#about">About</a></li>
+                    <li class="hideOnMobile"><a href="#department">Departments</a></li>
+                    <li class="hideOnMobile"><a href="javascript:void(0);">Dashboard<i class="arrow down"></i></a>
+                        <ul id="submenu" class="submenu">
+                            <li><a href="javascript:void(0);">Student Portal</a></li>
+                            <li><a href="javascript:void(0);">Faculty Login</a></li>
+                            <li><a href="javascript:void(0);">Officials</a></li>
+                        </ul>
+                    </li>
+                    <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+                    <li class="menu-button">
+                        <a onclick=showSidebar()>
+                            <span class="material-symbols-outlined">
+                                menu
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner">
+            
+        </div>
+        <div class="university">
+            <h1>University of Calicut</h1>
+            <h1 class="mal">കാലിക്കറ്റ് സർവ്വകലാശാല</h1>
+            <h2>Re-accredited by NAAC with A+ Grade</h2>
+        </div>
+        <div class="scroll">
+            <marquee onmouseover="this.stop()" onmouseout="this.start()">
+                <a href="javascript:void(0);">Commencement of Calicut University Common Admission Test (CUCAT) - 2024</a> | <a href="#">Updated fee structure for various cources under CBCSS-UG/PG are now published in the website</a> | <a href="#">Shastrayan 2024 - Open House Multi-Day Event organized by UoC</a> | <a href="#">Visit calicut university YouTube channel for guidance on applying for hostel rooms through new portal</a>
+            </marquee>
+        </div>
+    </section>
+
+    <section id="notifications" class="container">
+        <div class="notification-items">
+            <div id="announcements" class="noti-item">
+                <h2 class="noti-head">Announcements</h2>
+                <div class="noti-wrapper">
+                    <ul class="noti-list">
+                        <li>Revaluation fee updated</li>
+                        <li>Admission to hostels (men & women) in university campus to open from 12 Aug 2024</li>
+                        <li>Admission to BPES Integrated and BPEd Programmes</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="announcements" class="noti-item">
+                <h2 class="noti-head">Notifications</h2>
+                <div class="noti-wrapper">
+                    <ul class="noti-list">
+                        <li>Commencement of 3rd semester CBCSS (regular/supplimentary) university teaching departments (CCSS) - <a href="javascript:void(0);">Click Here</a></li>
+                        <li>Notification for uploading internal marks of students in university teaching departments - <a href="javascript:void(0);">Click Here</a></li>
+                        <li>Admission to BPES Integrated and BPEd Programmes - <a href="javascript:void(0);">Click Here</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="events" class="noti-item">
+                <h2 class="noti-head">Important Events</h2>
+                <div class="noti-wrapper">
+                    <div class="noti-list">
+                        <div class="event-item">
+                            <div class="calander">
+                                <p class="date">18/01</p>
+                            </div>
+                            <p class="desc">
+                                Seminar on Computational Intelligence and Data Analytics (2024) - 3rd Session
+                            </p>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="calander">
+                                <p class="date">25/04</p>
+                            </div>
+                            <p class="desc">
+                                University union inaguration
+                            </p>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="calander">
+                                <p class="date">18/01</p>
+                            </div>
+                            <p class="desc">
+                                Seminar on Computational Intelligence and Data Analytics (2024) - 3rd Session
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about container">
+            <h1 class="section-title">About Us</h1>
+            <div id="top-content">
+                <p>
+                    The University of Calicut, also known as Calicut University, is a state-run public university headquartered at Tenhipalam in Malappuram district of the state of Kerala, India. Established in 1968, it is the first university to be set up in northern Kerala. The university is coordinated by the University Grants Commission (re-accredited by NAAC with 'A+' grade).
+                </p>
+                <img src="img/cumini.avif" alt="image of calicut university">
+                <p>
+                    Calicut University, created by bifurcating Kerala University, is the second university to be set up in Kerala. M. M. Gani, 1969-75, was the first vice-chancellor of the university. Its primary catchment area is the northern districts of Kerala. Calicut University has nine schools and 34 departments. As of 2018-19 Calicut University had 301 undergraduate students and 1799 post-graduate students. The number of full-time doctoral students was 581. The university was ranked 54th among Indian universities by the National Institutional Ranking Framework (NIRF) in 2020 and 76th overall.
+                </p>
+                <p>
+                    Calicut University manages around 400 independent affiliated colleges spread across northern Kerala. It also conducts examinations for the students of the affiliated colleges. It is also the largest 'affiliating' university in Kerala.
+                </p>
+            </div>
+            
+            <h2 class="sub-title">History</h2>
+            <p>
+                The University came into being as a result of the efforts of the leaders C.H. Mohammed Koya, C. Achutha Menon, and K. P. Kesava Menon. With the encouragement of the then Kerala Chief Minister, E.M.S. Namboodiripad, C.H. Mohammed Koya the then Kerala Education Minister constituted a twenty-two member committee of experts to make a pilot study on establishing new universities in the State.
+            </p>
+            <p>
+                The twenty-two member Committee in its report unanimously recommended the immediate establishment of a University in Calicut to organize post-graduate departments of studies and research and to affiliate colleges in the northern districts. Before long C.H. Mohammed Koya appointed K.C. Chacko, Director of Technical Education as the special officer and M. Abdul Rahim, Municipal Commissioner, as administrative officer for the formation of the University at Calicut. On 23 July 1968 C.H Mohammed Koya obtained an Ordinance on creating the University.
+            </p>
+            <div class="comments">
+                <div class="comment">
+                    <p class="quote">&#8220</p>
+                    <div class="comment-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo corrupti quis voluptates sit dicta voluptatem, quos adipisci debitis cumque repudiandae velit quisquam nihil facilis vel, esse consequatur saepe eum quo!</p>
+                        <p class="commentor-name">&#8212; Prof. M K Jayaraj</p>
+                        <p class="comment-auth">Hon. Vice Chancellor, UoC</p>
+                    </div>
+                    <img src="img/vc.jfif" alt="vc of cu">
+                </div>
+
+                <div class="comment" id="pvc">
+                    <img src="img/pro-vc1.jpg" alt="vc of cu">
+                    <div class="comment-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo corrupti quis voluptates sit dicta voluptatem, quos adipisci debitis cumque repudiandae velit quisquam nihil facilis vel, esse consequatur saepe eum quo!</p>
+                        <p class="commentor-name">&#8212; Prof. P V Nasar</p>
+                        <p class="comment-auth">Hon. Pro-Vice Chancellor, UoC</p>
+                    </div>
+                    <p class="quote">&#8221;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Departmenmts -->
+    <section id="department">
+        <h1 class="section-title">Departments</h1>
+        <div class="departments container">
+            <div class="dept-item cs">
+                <h1 class="dept-head">Department of Computer Science</h1>
+                <div class="dept-body">
+                    <div class="icon">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABD0lEQVR4nO3ZQU7CUBDG8deFVxHjAXDbBehGzkNY6QpPANfpAbpV2QguLDu4AIn+Sd3QNGV4Jk2Zkfkl3TSZ1/nyvV1DcM79CTACCvQqgMeYIGv0K2KCfJdPUAr4idrPg3QEb0QZvBFl8EaUwRtRBm9EGbwRZfBGlMEbUQZvRBm8EWXwRgw3skS/j1MhroAt+m3KXaUgD8Lwa+gY8CbsM5QG58LgU6cpwu8+z8I+s2NDCfAlDN6eIciNsE/51yBpGrrDnn5TkBfsmTYFWbR0eBZxZbKWvvVeP/ia9qQRQdIWv9erHjzBrnE1SI5deTXIDrt29SCHF0ZQ3/s/BVlh17Ia5B74xJ4VMDjThXCXYQ/PAWaoOrZO5gAAAABJRU5ErkJggg==">
+                    </div>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odio nihil, nostrum corrupti nemo mollitia hic doloremque exercitationem ipsa officia dignissimos facere esse provident voluptates fugiat vel possimus modi pariatur.
+                    </p>
+                </div>
+                <p class="view"><a class="view-more" href="#">View More...</a></p>
+            </div>
+
+            <div class="dept-item stati">
+                <h1 class="dept-head">Department of Statistics</h1>
+                <div class="dept-body">
+                    <div class="icon">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBklEQVR4nO2YPS9EQRSGh4RmE4XEWiIRnUrjLyiIUkGl2EIr0fgLWj/BH9DR+4gQhSWESoFEfEQUEg0eGc7KyebumjvrrpnNfaubO+eczHPeM3OTa0zGAraAQxO7EJnYRQ7i2bHYZWgTmZ+HSEUOEpjIHQlM5I4EJnJHWihgGrgBroGpOjHhfxD5BqjqKjMQl475CpgFPloF8mvHPGp2A6uq7oOtDUxmAgKUazpmtQR0NAExBOxJrVdgwSHHDwQoAGtq84/Stao2gaIHxARwLzUugXHHvPQgwChwojq2qNZmgCdZu3M9M9ZBYBl4k9wNoNcl1wsEmAdeJPwCGEuIGQZ2JeZDZr27Qc0eYF3FrwCdrhDOIOpWsuNTlR2rQoPCXbKhd4nfB0YS4sZlhJCRmkgDkBZE30q2Y+WUM38ruc/AnFpbkNFEDveQD4QvSOrr1R56OfxVPdS423D0/hJkSmDq3uOOh9ley9S4O+tTzwvkL5XFx/O/QJp2NwiQrEQOEpjIHQlM5I4EJtrWkdhlaBOZllkfs4CSalqfiVFAP3CqQM4tmIkcQsMMmIjG6VxtXEMggKl/F/2nE/ZPy6ACKaq1cJ0hAULef0meizUxA6GPU0mt7QDbdWLPbANMyE40UoIzv+YEBxEkDHCcNE4p8vWYVbLZpdtGDoCjZj50AlOxv1ab2cwn+9m8lwroHk8AAAAASUVORK5CYII=">
+                    </div>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odio nihil, nostrum corrupti nemo mollitia hic doloremque exercitationem ipsa officia dignissimos facere esse provident voluptates fugiat vel possimus modi pariatur.
+                    </p>
+                </div>
+                <p class="view"><a class="view-more" href="#">View More...</a></p>
+            </div>
+
+            <div class="dept-item mat">
+                <h1 class="dept-head">Department of Mathematics</h1>
+                <div class="dept-body">
+                    <div class="icon">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADrUlEQVR4nO2azWoUQRDHW83RQyAYDMZrBD3qQ3jxkBfwDbyJ7+BR30FJ8OMk8RAUzLigEhASJFF8hGiCF1GUn/Sm18zOdvf2R/XOZJM/LAzbvVXVv66untlppYQEzAObdE+V1BidAi4AW3RUatKDVx1R8Xg4TPtt42f7RAFgeOZ3gIsnBgCjMz/vcwicAzZiChbQyy14JQFs+qKw9F+OHYC+7jKAqG2nNvt3xIMJiLNVw8B1030fOC8ezDEA8Mh0v29qwZbJiFlgAXgPrIsHebSMNiYCgOGipR3PAIvAb/O5bAB8Nn0+ALueZdNr9e4uAUCzaN02s671uNZPg/ha6/cRmLP48BVB+VmVWgJm4JhBfjfXN2rtC7WZH2TCbFQAoz7femDJZxF+ADrNv9hmCzgLfKrN/CATXhfclZxSuQ497YMs0FpuwNk1hW/OLIed3JRuxhMQX3EAM2YNv9GDjrTdy73haR1AjgLvADemFkCKQgDYKKpUnQLIJSisZjzj4suOH4uBxMfXVHWvCJL2+Jqq0yIYmwE2iipV2QamAEDV+hNZJABf/4lKqFi2WwRzJFQs5Ysghw8mT4EfyEnbeg4sqYIKAWALTjUG/41y0rYXuwzgifnuBXBJMDD9l9iasb0qZTcFgK+/qqX9YuK/Ky5VJru0DgQLomwRpPYFwvIFlFEQZYsgAcHGqoTNEF8uf67J8QZrUrTyXU87gL5SBhTbP0dN++P8jbTjCDbkOsRJYP9ep4qgatzzu64FAcQUxNMiGJsBNorK9gOE5Qhw3bwR6h+s6BqASnD8lSNA/WJk6HRJaQC+/mrcDwoEaD1ik/p2WBQA9lvhKrNtJKBxEGLeDksDsEqiLeCk2YJKUNO+zZ8rtr58wRZqu6Y/octhGgEcAD+BmxIQQgB0aglwpF/ArdzlIA2gsoyjymxzAUAiE0QBlJAHwEMJCCEALJPT3jZYaz8jAUEagFUSbQ5/GsKDnJrgsx/SX0UEK94mAeHYA8iFUARAUxJt4wJMhRBi3xVbX21tg8qilMJobqz2RQCUUAyAFAjAVf2JsN+NbVD5oSVvkbkArJJoiwEgWROSAKgJtQVCyKoJdZ/NyWkVQKI0hCsxNcHlU/mCtXXObav5qzJftf8/byDx7KAab4dFt0Hf22Ep5T47KOCZ+W5N8iCDGfxLY3tFym4uBBuApcInRPYGBy+Ae8BfyuvduH+YVYOKTv9VU0GlpG2t1E+dAHeBP4I+XHpV8+lcuv8AsX2y4La/FFMAAAAASUVORK5CYII=">
+                    </div>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odio nihil, nostrum corrupti nemo mollitia hic doloremque exercitationem ipsa officia dignissimos facere esse provident voluptates fugiat vel possimus modi pariatur.
+                    </p>
+                </div>
+                <p class="view"><a class="view-more" href="#">View More...</a></p>
+            </div>
+
+            <div class="dept-item phy">
+                <h1 class="dept-head">Department of Physics</h1>
+                <div class="dept-body">
+                    <div class="icon">
+                        <img src="data:image/png;base64,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">
+                    </div>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odio nihil, nostrum corrupti nemo mollitia hic doloremque exercitationem ipsa officia dignissimos facere esse provident voluptates fugiat vel possimus modi pariatur.
+                    </p>
+                </div>
+                <p class="view"><a class="view-more" href="#">View More...</a></p>
+            </div>
+
+            <div class="dept-item bot">
+                <h1 class="dept-head">Department of Botany</h1>
+                <div class="dept-body">
+                    <div class="icon">
+                        <img src="data:image/png;base64,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">
+                    </div>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odio nihil, nostrum corrupti nemo mollitia hic doloremque exercitationem ipsa officia dignissimos facere esse provident voluptates fugiat vel possimus modi pariatur.
+                    </p>
+                </div>
+                <p class="view"><a class="view-more" href="#">View More...</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conmtact section -->
+    <section id="contact">
+        <div class="contact container">
+            <h1 class="section-title">Contact</h1>
+            <div class="contact-content">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7225133027287!2d75.89266047502977!3d11.134031952495855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba651d12ad11f7d%3A0xcdc1f327bd56c1a3!2sUniversity%20of%20Calicut!5e0!3m2!1sen!2sin!4v1722660975995!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="info">
+                    <div class="info-item">
+                        <i class="material-icons icon">location_on</i>
+                        <h3 class="info-title">Address</h3>
+                        <hr>
+                        <p class="info-content">Tirur - Calicut Rd<br>Thenhipalam<br>Kerala<br>PIN - 673635</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="material-icons icon">call</i>
+                        <h3 class="info-title">Call</h3>
+                        <hr>
+                        <p class="info-content">
+                            <span style="font-weight: 600">Ph:</span> 0494 - 240 7227<br>
+                            <span style="font-weight: 600">Ph:</span> 0494 - 240 7228<br>
+                            <span style="font-weight: 600">Mob:</span> +91 9955717227</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="material-icons icon">language</i>
+                        <h3 class="info-title">Web</h3>
+                        <hr>
+                        <p class="info-content"><span style="font-weight: 600">Email:</span> <a href="#contact">contact@uoc.ac.in</a></p>
+                        <p class="info-content"><span style="font-weight: 600">Website:</span> <a href="https://www.uoc.ac.in/">www.uoc.ac.in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer container">
+            <div class="foot-brand">
+                <h1>University of Calicut</h1>
+                <p>Kerala's Largest University</p>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="javascript:void(0);">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nO2ZzUrDQBDH82S7Vby1JTsoPpAieFBv0qMP4UyEQq03L4KWWh/Am4eASXupYEeiWL9o6W5jdgPzgzku+f/2m00UCYIgBE3DYKwArxTgRANxFaUAJwqor+KkvVZ4beiwqtB6URk8cO557+HhU4Ja1gLFtAlI4NJewODYe3CYV24tEEBo/l4ioEvoxc2dhI86Q767TznLpzyb8Q+CHoGN7YSvb554GTpkgePOcGn44AUGo5RrLZCPX/4E3ju55a3di5Xaexd4/b1imd/XxartvQvYThktAvA/vb6I52wa3gjYMBil9RY47z7WW+D07CE8AdmFQEaAZAppOYlJdiGWbRTkNspyEuu6XSVUyU+L6wlgZi8A1C/7QudcBnv2AnHS9h4cPqoB2IxcKH4u+A6vgPadwn9JUKt4n6/yuV0V3zLYc+55QRCEqCreAAESa+zxbT1rAAAAAElFTkSuQmCC">
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="javascript:void(0);"><img src="data:image/png;base64,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"></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="javascript:void(0);"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqElEQVR4nO2YzWsTQRjGQ0YQQRQEEQQRPAp6ET158uClLV4ERfGmoHjx4ElBhFIQRfwHRBQP2a22asVaommiYFra0mKDtIJai2CbtrY2O7ud/Zh9ZDcmUpq6u/mYTWEfeE8JzPOb93l3ZycWixQpUqSmFkmoJ+ISzRBZoUSmEFMKjcs0TSS1rTbzknJLnGlauSSlo+qdD928/LcStDUwQDE2TWBepojLtD94BySqhG2clGNEC8EBwjYtr64IgEQdoBs3Qps7Ka6O6ZgocBgcmGM2un+YOPJGc3/f+pTidJbhZk4XA3Ajp5cX96pNMnXNVpLOgdSsBc0Ccr85dj1XxQB8UTgWdBsH+7whzg8xeOntrIULQwxXRgV1oGDa7sJ5ZuNYeuW/AIMLHH40rdrY2yOoA9l5q7ywZQPXPupuVCr9l1ZOzypxG9j3cn3zdQc4+WFtLN7NWTicXBspP7JsiH8KPZyqvLWZvIVLIwwHXmvY1uUPIM9ssQDpvIWLwwx9M/+iVIvGl7hYgP58fYyX9Pi7KRbAeQc4ua2Xzg4w8TPQ8n4F86x2CtUCdj5TxQNseUKxv1fDq5+1xenupOFpviEA0rSPB7yHlg0bu1+o4QBs71Lx4JuJWkJ0Kuud/YYBlOpQUsOdSQNjixxLhn+ce5/9RYc0GqBUzour1+c8tH8y1j16EBEAzvndOXgdz6zg+rju+8DmfAecG/QfG9IIgKMpDckZK1D2nQPd7QkDO7r9DSwREaE9PSouj+h4NGVidJG75xnGix8pzk4P/+K4/9XEmQHmDny1xomoGWh0xSIAeaN1QGqiq0WZLgcGcO/nwzcOp+ISTVXRAbUtbOOkVJ20JTBAEULpCN28rLRXZb4MkaCtzv280JmQqOLEpuqdjxQpUqSYKP0BoMaOdbh640oAAAAASUVORK5CYII="></a>
+                    </div>
+                </div>
+            </div>
+            <p>Copyright &copy; 2024 Codigo | All rights reserved</p>
+            <p>codigo@uoc.ac.in</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

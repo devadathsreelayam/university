@@ -1,0 +1,84 @@
+:root {
+    --main-color: #404c58;
+    --heading-color: rgb(255, 75, 114);
+    --text-color: #fff;
+}
+
+#notifications {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: calc(50vh - 50px);
+}
+
+#notifications .notification-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#notifications .noti-item {
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    position: relative;
+    max-width: 400px;
+}
+
+#notifications .noti-item .noti-head {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 600;
+    background-color: var(--main-color);
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+#notifications .noti-item .noti-wrapper {
+    position: relative;
+    line-height: 1.8rem;
+    padding: 10px 30px;
+}
+
+#notifications #events .noti-wrapper {
+    padding: 5px;
+}
+
+.event-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #404c58;
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 100%;
+}
+
+#events .event-item:last-child {
+    border-bottom: 0;
+}
+
+.calander {
+    background-color: #404c58;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: max-content;
+    height: max-content;
+    min-width: 50px;
+    color: #fff;
+    border-radius: 10%;
+}
+
+hr {
+    color: #fff;
+}

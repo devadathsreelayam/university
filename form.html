@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <section id="user-form">
+        <div class="form container">
+            <form action="" id="form">
+                <i class="close" id="close-btn">&times;</i>
+                <h1 class="section-title">Login</h1>
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" placeholder="Username" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="mobile">Mobile</label>
+                    <input id="mobile" name="mobile" placeholder="Mobile" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" placeholder="Password" type="password">
+                    <div class="error"></div>
+                </div>
+                <div class="buttons">
+                    <input id="reset" type="reset" value="Reset">
+                    <input id="login" type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="form.js"></script>
+</body>
+</html>
