@@ -1,18 +1,36 @@
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const mobile = document.getElementById('mobile');
-const password = document.getElementById('password');
+function openForm(evt, formName) {
+    var i, tabcontent, tablinks;
 
-form.addEventListener('submit', e => {
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(formName).style.display = "flex";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+const loginForm = document.getElementById('login');
+const loginRegNumber = document.getElementById('login-register-number');
+const loginPassword = document.getElementById('login-password');
+const loginReset = document.getElementById('login-reset');
+
+loginForm.addEventListener('submit', e => {
     e.preventDefault();
     validateInputs();
 });
 
-form.addEventListener('reset', e => {
-    e.preventDefault(); // Prevent the default reset behavior
-    clearValidation(); // Call the function to clear validations
-    form.reset(); // Reset the form fields
+loginForm.addEventListener('reset', e => {
+    resetValidation();
 });
+
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -32,44 +50,86 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 }
 
-function isValidMobile(number) {
-    const re = /^[1-9][0-9]{9}$/;
-    return re.test(String(number).toLocaleUpperCase());
-}
-
 const validateInputs = () => {
-    const usernameValue = username.value.trim();
-    const mobileValue = mobile.value.trim();
-    const passwordValue = password.value.trim();
+    const loginRegNumberValue = loginRegNumber.value.trim();
+    const loginPasswordValue = loginPassword.value.trim();
 
-    if (usernameValue == '') {
-        setError(username, 'Username is required');
+    if (loginRegNumberValue === '') {
+        setError(loginRegNumber, 'Register number is required')
     } else {
-        setSuccess(username);
-    }
-    
-    if (mobileValue == '') {
-        setError(mobile, 'Username is required');
-    } else if (String(mobileValue).charAt(0) == '0') {
-        setError(mobile, 'Mobile number should not start with 0')
-    } else if (!isValidMobile(mobileValue)) {
-        setError(mobile, 'Mobile number should be 10-digits')
-    } else {
-        setSuccess(mobile);
+        setSuccess(loginRegNumber);
     }
 
-    if (passwordValue == '') {
-        setError(password, 'Username is required');
+    if (loginPasswordValue === '') {
+        setError(loginPassword, 'Password is required')
     } else {
-        setSuccess(password);
+        setSuccess(loginPassword);
     }
 }
 
-const clearValidation = () => {
-    const inputControls = document.querySelectorAll('.input-control');
-    inputControls.forEach(inputControl => {
-        const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = '';
-        inputControl.classList.remove('error', 'success');
+const resetValidation = () => {
+    const inputItems = document.querySelectorAll('.input-item');
+    inputItems.forEach(item => {
+        item.classList.remove('error');
+        item.classList.remove('success');
+        const errorDisplay = item.querySelector('.error');
+        if (errorDisplay) {
+            errorDisplay.innerText = '';
+        }
     });
+}
+
+const registerForm = document.getElementById('register');
+const registerName = document.getElementById('name');
+const registerRegNumber = document.getElementById('register-number');
+const registerDOB = document.getElementById('dob');
+const registerGender = document.getElementById('');
+const registerMobile = document.getElementById('mob-number');
+const registerPassword = document.getElementById('password');
+
+registerForm.addEventListener('submit', e => {
+    e.preventDefault();
+    validateRegistration();
+});
+
+registerForm.addEventListener('reset', e => {
+    resetValidation();
+});
+
+const validateRegistration = () => {
+    const registerNameValue = registerName.value;
+    const registerRegNumberValue = registerRegNumber.value.trim();
+    const registerDOBValue = registerDOB.value.trim();
+    const registerMobileValue = registerMobile.value.trim();
+    const registerPasswordValue = registerPassword.value.trim();
+
+    if (registerNameValue === '') {
+        setError(registerName, 'Name is required')
+    } else {
+        setSuccess(registerName);
+    }
+
+    if (registerRegNumberValue === '') {
+        setError(registerRegNumber, 'Register number is required')
+    } else {
+        setSuccess(registerRegNumber);
+    }
+
+    if (registerDOBValue === '') {
+        setError(registerDOB, 'DOB is required')
+    } else {
+        setSuccess(registerDOB);
+    }
+
+    if (registerMobileValue === '') {
+        setError(registerMobile, 'Mobile number is required')
+    } else {
+        setSuccess(registerMobile);
+    }
+
+    if (registerPasswordValue === '') {
+        setError(registerPassword, 'Password is required')
+    } else {
+        setSuccess(registerPassword);
+    }
 }

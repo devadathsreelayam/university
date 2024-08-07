@@ -3,37 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Student Form</title>
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <section id="user-form">
-        <div class="form container">
-            <form action="" id="form">
-                <i class="close" id="close-btn">&times;</i>
-                <h1 class="section-title">Login</h1>
-                <div class="input-control">
-                    <label for="username">Username</label>
-                    <input id="username" name="username" placeholder="Username" type="text">
-                    <div class="error"></div>
-                </div>
-                <div class="input-control">
-                    <label for="mobile">Mobile</label>
-                    <input id="mobile" name="mobile" placeholder="Mobile" type="text">
-                    <div class="error"></div>
-                </div>
-                <div class="input-control">
-                    <label for="password">Password</label>
-                    <input id="password" name="password" placeholder="Password" type="password">
-                    <div class="error"></div>
-                </div>
-                <div class="buttons">
-                    <input id="reset" type="reset" value="Reset">
-                    <input id="login" type="submit" value="Login">
-                </div>
-            </form>
+    <section id="form">
+        <div class="form-container">
+            <h1 id="form-heading">Student Portal</h1>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openForm(event, 'login')" id="defaultOpen">Login</button>
+                <button class="tablinks" onclick="openForm(event, 'register')">Register</button>
+            </div>
+            
+            <div class="tab-body">
+                <form action="?" id="login" class="tabcontent">
+                    <h3 class="form-heading">Login</h3>
+                    <div class="input-item">
+                        <label for="login-register-number">Register Number</label>
+                        <input name="login-register-number" id="login-register-number" type="text" placeholder="Enter register number" onblur=validateUsername()>
+                        <p class="error"></p>
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="login-password">Password</label>
+                        <input name="login-password" id="login-password" type="password" placeholder="Enter password">
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="controls">
+                        <input type="reset" name="login-reset" value="Reset">
+                        <input type="submit" name="login" value="Login" onclick=validateUsername()>
+                    </div>
+                </form>
+                
+                <form action="?" id="register" class="tabcontent">
+                    <h3>Register</h3>
+                    <div class="input-item">
+                        <label for="name">Name of Student <span class="mandatory">*</span></label>
+                        <input name="name" id="name" type="text" placeholder="Enter student name">
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="input-item">
+                        <label for="register-number">Register Number <span class="mandatory">*</span></label>
+                        <input name="register-number" id="register-number" type="text" placeholder="Enter student name">
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="input-item">
+                        <label for="institution-name">Type of Institution</label>
+                        <select name="institution-name" id="institution-name">
+                            <option value="cu-campus">University Campus</option>
+                            <option value="aff-college">Affiliated Colleges</option>
+                            <option value="autonomous">Autonomous Colleges</option>
+                            <option value="autonomous">Distance Education</option>
+                        </select>
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-item">
+                            <label for="dob">Date of Birth <span class="mandatory">*</span></label>
+                            <input name="dob" id="dob" type="date" placeholder="Enter student name">
+                            <p class="error"></p>
+                        </div>
+
+                        <div class="combo-input-item">
+                            <p>Gender <span class="mandatory">*</span></p>
+                            <div class="options">
+                                <input name="gender" id="male" type="radio" value="Male">
+                                <label for="gender">Male</label>
+
+                                <input name="gender" id="female" type="radio" value="Female">
+                                <label for="gender">Female</label>
+
+                                <input name="gender" id="other" type="radio" value="Female">
+                                <label for="gender">Other</label>
+                            </div>
+                            <p class="error"></p>
+                        </div>
+                    </div>
+
+                    <div class="input-item">
+                        <label for="mob-number">Mobile Number <span class="mandatory">*</span></label>
+                        <input name="mob-number" id="mob-number" type="text" placeholder="Enter mobile name">
+                        <p class="error"></p>
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="password">Password <span class="mandatory">*</span></label>
+                        <input name="password" id="password" type="password" placeholder="Enter password">
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="controls">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Register" onclick=validateUsername()>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 

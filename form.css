@@ -1,130 +1,158 @@
-#user-form {
-    background: linear-gradient(to right, rgb(185, 11, 156), rgb(224, 9, 38));
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#user-form .section-title {
-    color: #fff;
-}
-
-#user-form .form {
-    flex-direction: column;
-}
-
-#user-form .form form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    align-items: center;
-    justify-content: center;
+body {
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    padding: 30px;
-    border-radius: 10px;
-    position: absolute;
+    font-size: 12pt;
 }
 
-#form input[type="submit"], #form input[type="reset"] {
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 15px;
-    margin-top: 10px;
+#form {
+    height: 100%;
     width: 100%;
-    background: #d3d3d4;
-    border: none;
-    border-radius: 4px;
-    transition: letter-spacing 0.3s ease;
-}
-
-#form input[type="submit"] {
-    position: relative;
-    background: linear-gradient(to right, rgb(71, 172, 231), rgb(21, 120, 177));
-    color: white;
-    transition: letter-spacing 0.3s ease;
-}
-
-#form .buttons input:hover {
-    letter-spacing: 0.1rem;
-}
-
-.input-control {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
 }
 
-.input-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    font-size: 1rem;
-    padding: 15px;
-    width: 100%;
-    margin-top: 5px;
+#form #form-heading {
+    font-size: 21pt;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.input-control input:focus {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.form-container {
+    width: 500px;
 }
 
-.input-control label {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
 
-#form .buttons {
+.tab button {
+    font-size: inherit;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    float: left;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-bottom: 3px;
+    width: 50%;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    border-bottom: 3px solid navy;
+}
+
+.tabcontent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+  
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     width: 100%;
 }
 
-.input-control input:focus {
-    outline: 0;
+.input-item input, .input-item select {
+    height: 40px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #c1c1c1;
 }
 
-.input-control.success input {
-    border-color: #09c372;
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
 }
 
-.input-control.error input {
-    border-color: #ff3860;
-}
-
-.input-control .error {
-    color: #ff3860;
-    font-size: 1.2rem;
-    height: 25px;
-}
-
-.input-control {
+.combo-input-item {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
-#form .buttons input:hover {
+.row .options {
+    width: max-content;
+    height: 40px;
+    line-height: 40px;
+}
+
+.input-item input:focus {
+    outline: 2px solid rgb(55, 123, 224)
+}
+
+.input-item p.error {
+    height: 0.8rem;
+    font-size: 0.8rem;
+    color: rgb(212, 27, 17);
+}
+
+.controls {
+    width: 100%;
+}
+
+.controls input {
+    height: 40px;
+    width: calc(50% - 3px);
+    font: inherit;
+    border: 0;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.controls input[type=submit] {
+    background-color: #0a86fa;
+    color: #f1f1f1;
+}
+
+.controls input:hover {
     cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#close-btn {
-    color: #fff;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    font-family: sans-serif;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+.input-item.error input {
+    outline: 2px solid rgb(255, 33, 22);
 }
 
-#close-btn:hover {
-    background-color: #aaa;
-    cursor: pointer;
+.input-item.success input {
+    outline: 2px solid rgb(12, 165, 37);
+}
+
+.mandatory {
+    color:rgb(255, 33, 22);
 }
